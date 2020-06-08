@@ -1,0 +1,165 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto; /* alinhamento de caixa pelo lado de fora*/
+}
+
+#page-create-point header{
+    margin-top: 48px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a{
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point header a span{
+    margin-right: 16px;
+    background-image: url('../assets/arrow-left.svg');
+    display: flex;
+    width: 20px;
+    height: 24px;
+
+}
+form{
+    background-color: white;
+    padding: 64px; /*preenchimento da caixa do cadastro do ponto de coleta*/
+    margin: 80px auto;
+    border-radius: 8px; /*deixa redondin*/
+    max-width: 730px;
+    
+}
+
+form h1{
+    font-size: 36px;
+}
+
+form fieldset{
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form legend h2{
+    font-size: 24px;
+}
+
+form legend span{
+    font-size: 14px;
+    color: var(--title-color);
+}
+
+form .field{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+}
+
+form .field-group{
+    display: flex;
+}
+
+form input,
+form select{
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none; /* tira a linha preta da caixa qunado vc seleciona ela*/
+
+}
+
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .field-group .field + .field{ /* pega a caixa q esta ao lado da primeira caisa, ou seja, vai pegar a caixa do numero e da cidade, pois estao ao lado da endereço e estado, pra poder separar*/
+    margin-left: 24px;/* aplica margem na caixa ao lado*/
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    transition: background-color 400ms;
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
+
+
+.items-grid{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+}
+
+.items-grid li{
+    background-color: #f5f5f5;
+    list-style: none; /* tira as bolinhas da frente, pois como é "li" ele vem por padrão*/
+    
+    border: 2px solid #f5f5f5;/* coloca uma borda*/
+    border-radius: 8px; /*arredonda as bordas*/
+   
+    height: 180px; /*altura das bordas*/
+
+    padding: 32px 24px 16px; /* espaçamento das bordas (topo,laterais e baixo)*/
+
+    display:flex; /*alinha as imagens*/
+    flex-direction: column; /*alinha o texto e a imagem em formato coluna, pois o padrão é em linha*/
+    align-items: center; /*alinha os itens ao centro*/
+    justify-content: space-between;
+    text-align: center; /*alinha os textos ao centro*/
+
+    cursor: pointer;
+}
+
+.items-grid li span{
+    margin-top: 12px;
+    flex:1; 
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+
+}
+
+.items-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none;
+
+    /*serve pra não ser possível o click no texto e na imagem no li*/
+}
