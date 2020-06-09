@@ -50,7 +50,7 @@
 
  }
 }
-@media only screen and (min-width: 1000px) { /* pro texto não sobrepor a imagem em resoluções altas*/
+@media only screen and (min-width: 1000px) { /* pro texto não sobrepor a imagem em resoluções altas */
     #page-home{
         background-position-x: 45vw;
     }
