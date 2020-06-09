@@ -1,4 +1,4 @@
- @media(max-width: 900px){ /* quando o tamanho da tela for menor que 900px, ele adequa as configs pra essa tela maior*/
+@media(max-width: 900px){ /* quando o tamanho da tela for menor que 900px, ele adequa as configs pra essa tela maior*/
     
     #page-home{
          background-position-x: 70vw;
@@ -50,3 +50,8 @@
 
  }
 }
+@media only screen and (min-width: 1000px) { /* pro texto não sobrepor a imagem em resoluções altas*/
+    #page-home{
+        background-position-x: 45vw;
+    }
+  }
